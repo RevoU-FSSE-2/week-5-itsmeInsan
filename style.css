@@ -1,0 +1,453 @@
+body{
+    margin:auto;
+}
+.logo-bumihejo{
+    width: auto;
+    max-width: 100%;
+    height: 50px;
+}
+@font-face {
+    font-family: "lilitaone";
+    src: url(font/LilitaOne-Regular.ttf);
+}
+@font-face {
+    font-family: "fjalla";
+    src: url(font/FjallaOne-Regular.ttf);
+}
+@font-face {
+    font-family: "lobster";
+    src: url(font/Lobster-Regular.ttf);
+}
+@font-face {
+    font-family: "playfair";
+    src: url(font/PlayfairDisplay-VariableFont_wght.ttf);
+}
+.nama-perusahaan{
+    color: white;
+    font-family: "playfair";
+}
+nav{
+    display: block;
+}
+.nav-warp{
+    padding: 40px;
+    background-color: black;
+    height: 5vh;
+    max-width: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+}
+.nav-bars{
+    display: flex;
+    align-items: center;
+}
+.nav-bars ul{
+    color: white;
+    /* display: flex; */
+}
+.nav-bars ul:hover{
+    color:greenyellow;
+}
+.logo{
+    display: flex;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-image: url(https://cms-assets.offset.earth/app/uploads/20191130165146/PHOTO-2019-10-29-10-16-10-1024x682.jpg) ;
+    background-repeat: no-repeat;
+    background-attachment:fixed;  
+    background-size:cover;
+    align-items: center;
+    max-width: 100%;
+    height: 80vh;
+}
+header h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #EBB02D;
+}
+header p{
+    font-size: x-large;
+    width: auto;
+    font-family: "lilitaone"; 
+    color: #675D50;
+}
+.mission-perusahaan{
+    font-size: xx-large;
+    align-items: center;
+    text-align: center;
+    font-family: "fjalla";
+}
+.why-choose-bumihejo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.why-choose-bumihejo h1{
+    font-family: "lobster";
+    color:red;
+}
+.why-choose-bumihejo b{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+}
+.why-choose-bumihejo p{
+    font-family:sans-serif;
+    font-size: large;
+}
+.reason{
+    display: grid;
+    grid-template-columns: repeat(2,30vh);
+    grid-template-rows: repeat(2,1fr);
+    gap: 10vw;
+}
+.sustainability{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.sustainability img{
+    width: auto;
+    max-height: 20vh;
+}
+.green-techno{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.green-techno img{
+    width: auto;
+    max-height: 20vh;
+}
+.solutions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.solutions img{
+    width: auto;
+    max-height: 20vh;
+}
+.experience{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.experience img{
+    width: auto;
+    max-height: 20vh;
+}
+.services-bumihejo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.services-bumihejo h2{
+    font-family: "lobster";
+    color: #749F82;
+}
+.services-bumihejo p{
+    font-size: x-large;
+    font-family: "playfair";
+    color: #665A48;
+    text-align: center;
+}
+.myslides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: x-large;
+    font-family: "fjalla";
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    background-color: rgb(36, 128, 0);
+    width: 100vw;
+    max-width: 100%;
+    height: 10vh;
+    max-height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #0B2447;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+.companies{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "lobster";
+    color: #395144;
+}
+.company-container{
+    display: grid;
+    grid-template-columns: repeat(5,10vw);
+    grid-template-rows: repeat(3,1fr);
+    grid-gap: 10vw;
+    align-items: center;
+    
+}
+.logo-perusahaan{
+    filter: saturate(0%);
+    transition: filter .2s cubic-bezier(0.075, 0.82, 0.165, 1) ;
+}
+.logo-perusahaan:hover{
+    filter:saturate(100%);
+}
+.footer-web{
+    background-color: black;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sosmed{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.fa-brands{
+    color: white;
+}
+.fa-brands:hover{
+    color: greenyellow;
+}
+.fa-instagram{
+    font-size: 30px;
+}
+.fa-facebook{
+    font-size: 30px;
+}
+.fa-youtube{
+    font-size: 30px;
+}
+.copyright{
+    color:white
+}
+.video-career{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+}
+.video-career h2{
+    font-family: "lobster";
+}
+.video-career iframe{
+    width: 100vw;
+    height: 50vh;
+}
+.career-container{
+    display: grid;
+    grid-template-columns: repeat(2,40vw);
+    grid-template-rows: repeat(1,1fr);
+    grid-gap: 10vw;
+    
+}
+
+.career{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.career h2{
+    font-family: "lobster";
+}
+.fresh-graduate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(0, 166, 255);
+    color: white;
+}
+.fresh-graduate p{
+    font-size: large;
+    font-family: "lilitaone";
+}
+.fresh-graduate button{
+    font-size: large;
+    background-color: aqua;
+    height: auto;
+}
+.fresh-graduate button:hover{
+    color: white;
+    background-color: #FFDEB4;
+}
+.professional{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(0, 166, 255);
+    color: white;
+}
+.professional p{
+    font-size: large;
+    font-family: "lilitaone";
+}
+.professional button{
+    font-size: large;
+    background-color: aqua;
+    height: auto;
+}
+.professional button:hover{
+    color: white;
+    background-color: #FFB4B4;
+}
+.information{
+    background-color: #03C988 ;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    font-size: large;
+}
+.information h2{
+    font-family: "lobster";
+}
+.information p{
+    font-family: "lilitaone";
+}
+.input-nama{
+    width: 50vw;
+}
+.input-email{
+    width: 50vw;
+}
+.information textarea{
+    width: 50vw;
+}
+.button-submit{
+    width: 50vw;
+    background-color: #0a9b6b;
+    color: white;
+}
+.button-submit:hover{
+    background-color: rgb(0, 183, 255);
+}
+.icon{
+    display: none;
+}
+@media only screen and (max-width:768px) {
+    .nav-bars{
+        display: none;
+    }
+    .nav-warp{
+        height: auto;
+    }
+    .nav-warp .nav-bars ul{
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+        background-color: black;
+        margin: 0;
+    width: 500px;
+    }
+    .fa{
+        color: white;
+    }
+    .fa-bars{
+        font-size: large;
+    }
+    .icon{
+        background: black;
+        color: white;
+        display: block;
+        position: absolute;
+        top: 50px;
+        left: 700px;
+    }
+    .icon:hover{
+        background: rgb(0, 221, 255);
+        color: red;
+    }
+}
