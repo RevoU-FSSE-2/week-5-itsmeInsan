@@ -34,7 +34,7 @@ nav{
     background-color: black;
     height: 5vh;
     max-width: 100%;
-    width: 100vw;
+    width:-webkit-fill-available;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -54,6 +54,16 @@ nav{
 }
 .logo{
     display: flex;
+    animation: geser 3s ease-in;
+}
+@keyframes geser {
+    from{
+        margin-left: 300%;
+    }
+    to{
+        margin-left: 0%;
+    }
+    
 }
 header{
     display: flex;
@@ -62,11 +72,24 @@ header{
     justify-content: center;
     background-image: url(https://cms-assets.offset.earth/app/uploads/20191130165146/PHOTO-2019-10-29-10-16-10-1024x682.jpg) ;
     background-repeat: no-repeat;
-    background-attachment:fixed;  
+    /* background-attachment:fixed;   */
     background-size:cover;
     align-items: center;
     max-width: 100%;
     height: 80vh;
+    background-position:center ;
+    animation: slidein 3s ease-in-out;
+}
+@keyframes slidein {
+    from {
+        margin-top: 100%;
+        width: 300%;
+    }
+    to {
+        margin-top: 0%;
+        width: 100%;
+    }
+    
 }
 header h1{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -88,6 +111,10 @@ header p{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image: url(https://ttf.co.uk/wp-content/uploads/BorneoRainforest_DSC_9267.jpg);
+    background-position: center;
+    background-size: cover;
+    
 }
 .why-choose-bumihejo h1{
     font-family: "lobster";
@@ -96,10 +123,12 @@ header p{
 .why-choose-bumihejo b{
     font-family: 'Times New Roman', Times, serif;
     font-size: xx-large;
+    color: white;
 }
 .why-choose-bumihejo p{
     font-family:sans-serif;
     font-size: large;
+    color: white;
 }
 .reason{
     display: grid;
@@ -260,6 +289,8 @@ img {vertical-align: middle;}
     align-items: center;
     font-family: "lobster";
     color: #395144;
+    animation: muncul 2s;
+    animation-timing-function: ;
 }
 .company-container{
     display: grid;
@@ -334,6 +365,7 @@ img {vertical-align: middle;}
     display:flex;
     flex-direction: column;
     align-items: center;
+    margin: 20px 0px;
 }
 .career h2{
     font-family: "lobster";
@@ -394,6 +426,7 @@ img {vertical-align: middle;}
 }
 .information p{
     font-family: "lilitaone";
+    text-align: center;
 }
 .input-nama{
     width: 50vw;
@@ -415,6 +448,18 @@ img {vertical-align: middle;}
 .icon{
     display: none;
 }
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+  background-color: transparent;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
 @media only screen and (max-width:768px) {
     .nav-bars{
         display: none;
@@ -422,7 +467,7 @@ img {vertical-align: middle;}
     .nav-warp{
         height: auto;
     }
-    .nav-warp .nav-bars ul{
+    .nav-warp .nav-bars a{
         color: white;
         padding: 14px 16px;
         text-decoration: none;
@@ -430,7 +475,12 @@ img {vertical-align: middle;}
         display: block;
         background-color: black;
         margin: 0;
-    width: 500px;
+        width: 400px;
+        position: relative;
+        top: 40px;
+    }
+    .nav-bars a:hover{
+        background-color: #03C988;
     }
     .fa{
         color: white;
@@ -448,6 +498,161 @@ img {vertical-align: middle;}
     }
     .icon:hover{
         background: rgb(0, 221, 255);
+        color: red;
+    }
+    .mission-perusahaan p{
+        font-size: large;
+    }
+    .services-bumihejo p{
+        font-size: large;
+    }
+    .slideshow-container{
+        max-width: 700px;
+    }
+    .dot{
+        width: 10px;
+        height: 10px;
+    }
+    .video-career iframe{
+        width: 600px;
+        height: 300px;
+    }
+}
+@media only screen and (max-width:430px) {
+    .nav-bars{
+        display: none;
+    }
+    .nav-warp{
+        height: auto;
+    }
+    .nav-warp .nav-bars a{
+        color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 10px;
+    display: block;
+    background-color: black;
+    margin: 0;
+    width: 50px;
+    position: relative;
+    right: 0;
+    top: 30px;
+    }
+    .nav-bars a:hover{
+        background-color: #03C988;
+    }
+    header h1{
+        font-size: large;
+    }
+    header p{
+        font-size: medium;
+    }
+    .mission-perusahaan p {
+        font-size: small;
+    }
+    .companies h2{
+        font-size: medium;
+        text-align: center;
+    }
+    .services-bumihejo h2{
+        font-size: medium;
+    }
+    .services-bumihejo p{
+        font-size: small;
+    }
+    .slideshow-container{
+        max-width:300px;
+    }
+    .text{
+        font-size: small;
+        height: 5vh;
+    }
+    .dot{
+        width: 8px;
+        height: 8px;
+    }
+    .why-choose-bumihejo h1{
+        font-size: medium;
+    }
+    .reason{
+        grid-template-columns: repeat(1,30vh);
+        grid-template-rows: repeat(4,1fr);
+    }
+    .why-choose-bumihejo b{
+        font-size: medium;
+    }
+    .why-choose-bumihejo p{
+        font-size: small;
+    }
+    .video-career h2{
+        font-size: medium;
+    }
+    .video-career iframe{
+        width: 300px;
+        height: 200px;
+    }
+    .career h2{
+        font-size: medium;
+    }
+    .fresh-graduate p{
+        font-size: medium;
+        margin: 10px 0px;
+    }
+    .fresh-graduate a button{
+        font-size: small;
+       margin: 10px 0px
+    }
+    .professional p{
+        font-size: medium;
+        margin: 10px 0px;
+    }
+    .professional a button{
+        font-size: small;
+        margin: 10px 0px;
+    }
+    .logo .nama-perusahaan{
+        font-size: small;
+    }
+    .copyright p{
+        font-size: small;
+    }
+    .career-container{
+        grid-template-columns: repeat(1,60vw);
+        grid-template-rows: repeat(2,1fr);
+    }
+    .information p{
+        font-size: medium;
+        margin: 0px 5px;
+    }
+    .copyright p{
+        font-size: x-small;
+    }
+    .fa-instagram{
+        font-size: 20px;
+    }
+    .fa-facebook{
+        font-size: 20px;
+    }
+    .fa-youtube{
+        font-size: 20px;
+    }
+    .company-container {
+        display: grid;
+        grid-template-columns: repeat(3,20vw);
+        grid-template-rows: repeat(5,1fr);
+        grid-gap: 10vw;
+        align-items: center;
+    }
+    .icon{
+        background: black;
+        color: white;
+        display: block;
+        position: initial;
+        /* top: 50px;
+        left: 700px; */
+    }
+    .icon:hover{
+        background: black;
         color: red;
     }
 }
